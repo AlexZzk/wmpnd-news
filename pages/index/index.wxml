@@ -1,0 +1,36 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='tab_caps_container'>
+    <view wx:for="{{news_title}}" wx:key="item" class="tab_caps" wx:for-index='index'>
+      <view class="{{activeIndex == index ? 'selected':''}}" bindtap='itemclick' data-item='{{item}}' data-index='{{index}}'>{{item}}
+      </view>
+    </view>
+  </view>
+  <!-- 图片新闻 -->
+  <view class="img_news">
+    <image class='pic_remen' src='../../images/remen.png'></image>
+    <image src='{{news_list[0].img_url}}' class="fir_news"></image>
+    <view class='pic_container'>
+      <view class='pic_title'>{{news_list[0].title}}</view>
+      <view class='pic_date_container'>
+        <view class='pic_src'>{{news_list[0].news_src}}</view>
+        <view class='pic_date'>{{news_list[0].date}}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 这一部分用来放新闻列表 -->
+  <view class='body_container' bindtap='newsOnclick' wx:for="{{news_list}}" wx:key="" data-item="{{item.link_url}}">
+    <view class = "news_list_tab">
+      <view class='news_container'>
+        <view id='news_title'>{{item.title}}</view>
+        <view class='news_date_container'>
+          <view id='news_sc'>{{item.news_src}}</view>
+          <view id='news_date'>{{item.date}}</view>
+        </view>
+      </view>
+      <image id='news_img' src='{{item.img_url}}' mode="scaleToFill"></image>
+    </view>
+    <view class='divLine'></view>
+  </view>
+
+</view>

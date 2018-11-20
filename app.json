@@ -1,0 +1,13 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/jump/jump"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#3198DB",
+    "navigationBarTitleText": "快读·资讯",
+    "navigationBarTextStyle":"#FFFFFF",
+    "enablePullDownRefresh": true
+  }
+}
